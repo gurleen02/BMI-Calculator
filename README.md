@@ -1,10 +1,10 @@
 # BMI-Calculator
 
-Chandigarh University - Winning Camp 2022 \newline
-Project - BMI Calculator
-Name - Gurleen Kaur
-UID - 21MCA2157
-File Created - 23/06/2022
+Chandigarh University - Winning Camp 2022. 
+Project - BMI Calculator. 
+Name - Gurleen Kaur  
+UID - 21MCA2157. 
+File Created - 23/06/2022  
 
 This program is a BMI Calculator. The user can calculate their Body Mass Index using this program. 
 
