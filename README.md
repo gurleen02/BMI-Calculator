@@ -1,6 +1,6 @@
 # BMI-Calculator
 
-Chandigarh University - Winning Camp 2022
+Chandigarh University - Winning Camp 2022 \newline
 Project - BMI Calculator
 Name - Gurleen Kaur
 UID - 21MCA2157
