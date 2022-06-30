@@ -42,17 +42,22 @@ def calculate_bmi():
     bmi_index(bmi)
 
 def bmi_index(bmi):
-    
+    gender_value = str(var.get())
+    if gender_value == 1:
+        gender = "Male"
+    else:
+        gender = "Female"
+
     if bmi < 18.5:
-        messagebox.showinfo('BMI Calculator', f'BMI = {bmi} Underweight')
+        messagebox.showinfo('BMI Calculator', f'Gender: {gender} \n BMI: {bmi} \n You are Underweight')
     elif (bmi > 18.5) and (bmi < 24.9):
-        messagebox.showinfo('BMI Calculator', f'BMI = {bmi} Normal')
+        messagebox.showinfo('BMI Calculator', f'Gender: {gender} \n BMI: {bmi} \n Your BMI is optimal')
     elif (bmi > 24.9) and (bmi < 29.9):
-        messagebox.showinfo('BMI Calculator', f'BMI = {bmi} Overweight')
+        messagebox.showinfo('BMI Calculator', f'Gender: {gender} \n BMI: {bmi} \n You are Overweight')
     elif (bmi > 29.9) and (bmi < 34.9):
-        messagebox.showinfo('BMI Calculator', f'BMI = {bmi} Obese') 
+        messagebox.showinfo('BMI Calculator', f'Gender: {gender} \n BMI: {bmi} \n You are Obese') 
     elif (bmi > 34.9):
-         messagebox.showinfo('BMI Calculator', f'BMI = {bmi} Extremely Obese') 
+         messagebox.showinfo('BMI Calculator', f'Gender: {gender} \n BMI: {bmi} \n You are Extremely Obese') 
     else:
         messagebox.showerror('BMI Calculator', 'something went wrong!')
 
@@ -63,6 +68,7 @@ ws.geometry('400x300')
 
 var = IntVar() # Holds an integer; default value 0
 
+#mainframe
 frame = Frame(
     ws,
     padx=10, # horizontal padding
@@ -85,10 +91,11 @@ age_lb.grid(row=1, column=1)
 age_tf = Entry( frame, )
 
 age_tf.grid(row=1, column=2, pady=5)
-gen_lb = Label(  frame, text='Select Gender')
+gen_lb = Label( frame, text='Select Gender')
 
 gen_lb.grid(row=2, column=1)
 
+#divide the frame into two columns in order to display the radio buttons side by side
 frame2 = Frame( frame )
 frame2.grid(row=2, column=2, pady=5)
 
@@ -107,6 +114,7 @@ female_rb = Radiobutton(
     value = 2
 )
 female_rb.pack(side=RIGHT)
+
 height_lb = Label(
     frame,
     text="Enter Height (cm)  "
